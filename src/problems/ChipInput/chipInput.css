@@ -1,0 +1,19 @@
+.chip-container{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.chip{
+  background-color: rgb(179, 186, 186);
+  padding: 0.25rem 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.delete-btn{
+  color:red;
+  cursor: pointer;
+}
