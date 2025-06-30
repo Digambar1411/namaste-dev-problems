@@ -1,0 +1,58 @@
+
+.form{
+  padding: 1rem;
+  background-color: rgb(246, 247, 249);
+  border: 1px solid rgb(176, 174, 174);
+  border-radius: 5px;
+}
+
+label,input{
+  display: block;
+  width: 90%;
+}
+textarea{
+  height: 3rem;
+  width: 90%;
+}
+
+input, textarea{
+  outline: none;
+  border-radius: 5px;
+}
+
+input:focus, textarea:focus{
+  border:2px solid rgb(123, 196, 225);
+}
+
+input{
+  padding: 4px;
+}
+
+section{
+  margin-bottom:1rem;
+}
+
+.form-btn{
+  background-color: rgb(39, 152, 197);
+  color: white;
+  padding: 8px;
+  width: 90%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.success-msg{
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.25rem;
+  border: 1px solid rgb(196, 192, 192);
+}
+
+.error{
+  color:red
+}
