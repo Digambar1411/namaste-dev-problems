@@ -3,23 +3,20 @@ import React, { useState } from 'react';
 // ✅ Export this so it can be tested 
 export const checkPasswordStrength = (pass) => {
   let count = 0;
-  const length = pass.length > 8;
-  const hasUpper = /[A-Z]/.test(pass);
-  const hasLower = /[a-z]/.test(pass);
-  const hasNumber = /[0-9]/.test(pass);
-  const hasSpecial = /[^a-zA-Z0-9]/.test(pass);
+  const rules = {
+    length: pass.length >= 8,
+    hasNumber: /[0-9]/.test(pass),
+    hasLower: /[a-z]/.test(pass),
+    hasUpper: /[A-Z]/.test(pass),
+    hasSpecial: /[^a-zA-Z0-9]/.test(pass)
+  };
 
-  let array = [length, hasNumber, hasLower, hasUpper, hasSpecial];
-  console.log(array);
-  for (let el of array) {
-    if (el) count++;
-  }
+  Object.keys(rules).forEach((rule) => rules[rule] && count++);
 
-  
-  console.log("Matched count:", count);
   if (count === 0) return 'Weak Password'
-
-  return `Level ${count === 1 ? '1' : (count > 1 && count < 4 ? '2' : '3')}`;
+  if (count === 1) return 'Level 1'
+  if (count === 2 || count === 3) return 'Level 2'
+  return 'Level 3'
 };
 
 const PasswordStrength = () => {
@@ -45,6 +42,7 @@ const PasswordStrength = () => {
       />
       <button onClick={checkStrength}>Check strength</button>
       {strength && <div>Strength: <strong>{strength}</strong></div>}
+
     </div>
   );
 };
