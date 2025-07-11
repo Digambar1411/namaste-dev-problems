@@ -40,9 +40,10 @@ function ContactForm() {
     <div>
       {!isSubmitted && <form className='form' onSubmit={handleSubmit}>
         <section>
-          <label htmlFor='name'>Name :</label>
+          <label htmlFor='name' className="form-label">Name :</label>
           {errors.name && <div className='error'>{errors.name}</div>}
           <input
+            className="form-input"
             id='name'
             name='name'
             onChange={handleChange}
@@ -50,10 +51,11 @@ function ContactForm() {
           />
         </section>
         <section>
-          <label htmlFor='email'>Email :</label>
+          <label htmlFor='email' className="form-label">Email :</label>
           {errors.email && <div className='error'>{errors.email}</div>}
 
           <input
+            className="form-input"
             type='email'
             id='email'
             name='email'
@@ -64,10 +66,11 @@ function ContactForm() {
         </section>
 
         <section>
-          <label htmlFor='msg'>Message :</label>
+          <label htmlFor='msg' className="form-label">Message :</label>
           {errors.message && <div className='error'>{errors.message}</div>}
 
           <textarea
+            className="form-textarea"
             id='message'
             name='message'
             value={formValues.message}

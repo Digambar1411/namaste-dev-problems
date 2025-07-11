@@ -24,7 +24,7 @@ function ProductDetails() {
 
   return (
     <div className='card product-details-card'>
-      <img src={product?.images[0]} alt={product.title} />
+      <img src={product?.images[0]} alt={product.title} className="card-img"/>
       <h2>{product.title}</h2>
       <div className='details-card-content'>{product.description}</div>
       <div><strong>Price:</strong> ${product.price}</div>

@@ -37,7 +37,7 @@ const Products = () => {
         {data.length > 0 && data.map(product => {
           return (
             <div className='list-card card' key={product.id}>
-              <img src={product.images[0]} alt={product.title}/>
+              <img src={product.images[0]} alt={product.title} className="card-img"/>
               <h2>{product.title}</h2>
               <div className='card-content'>{product.description}</div>
               <Link to={`/products/${product.id}`} className="view-more" >View More 
