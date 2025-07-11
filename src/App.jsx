@@ -11,6 +11,7 @@ import { BrowserRouter,Routes ,Route} from 'react-router-dom'
 import Navbar from './problems/ProductStore/Navbar'
 import ProductDetails from './problems/ProductStore/ProductDetails'
 import Home from './problems/ProductStore/Home'
+import TodoList from './problems/Todos/todo'
 function App() {
 
   return (
@@ -21,14 +22,15 @@ function App() {
       {/* <ContactForm /> */}
       {/* <PasswordStrength /> */}
       {/* <Accordion items={items}/> */}
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<ProductDetails />} />
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+      <TodoList />
 
     </>
   )
